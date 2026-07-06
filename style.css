@@ -1,0 +1,337 @@
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 2px solid #c5a059;
+}
+
+.hero-title {
+    color: #c5a059;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    color: #aaa;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* მაღაზიის ღილაკი */
+.btn-shop {
+    background-color: transparent;
+    color: #c5a059;
+    border: 2px solid #c5a059;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn-shop:hover {
+    background-color: #c5a059;
+    color: #000;
+}
+
+/* პროდუქტის ბარათი */
+.product-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #c5a059;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* ყიდვის ღილაკი */
+.btn-gold {
+    background-color: #c5a059;
+    color: #000;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-gold:hover {
+    background-color: #a6854a;
+    color: #fff;
+
+/* მენიუს დიზაინი */
+.my-navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 50px !important;
+    background-color: #000 !important;
+    border-bottom: 2px solid #c5a059 !important;
+}
+
+.nav-menu {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    gap: 20px !important;
+}
+
+.nav-menu li a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    padding: 10px 15px !important;
+    border: 1px solid #c5a059 !important;
+    border-radius: 5px !important;
+}
+
+.nav-menu li a:hover {
+    background-color: #c5a059 !important;
+    color: black !important;
+}
+/* ეს კოდი ყველაფერს აიძულებს, რომ იმუშაოს */
+body { background-color: #000 !important; color: #fff !important; }
+
+.my-navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 50px !important;
+    background-color: #000 !important;
+    border-bottom: 2px solid #c5a059 !important;
+}
+
+.nav-links {
+    display: flex !important;
+    list-style: none !important;
+    gap: 20px !important;
+    margin: 0 !important;
+}
+
+.nav-links a {
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 10px 15px !important;
+    border: 1px solid #c5a059 !important;
+    border-radius: 5px !important;
+}/* მენიუს საერთო ფონი და დიზაინი */
+ul {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* ლინკებს შორის დაშორება */
+    padding: 20px 0;
+    margin: 0;
+    justify-content: center; /* ცენტრში განლაგება */
+    background-color: #0d0d0d; /* ფონი */
+    border-bottom: 2px solid #c5a059; /* ოქროსფერი ხაზი ქვემოთ */
+}
+
+/* თითოეული ლინკის დიზაინი */
+ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: 0.3s; /* ეფექტის სირბილისთვის */
+}
+
+/* ჰოვერ ეფექტი (როცა მაუსს მიიტან) */
+ul li a:hover {
+    color: #c5a059; /* ტექსტი ხდება ოქროსფერი */
+    background-color: rgba(197, 160, 89, 0.1); /* ოდნავ ოქროსფერი ფონი */
+    border-radius: 5px;
+}/* მენიუს უჯრების სტილი */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* უჯრებს შორის დაშორება */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+/* თითოეული ლინკის "უჯრა" */
+.nav-links a {
+    display: block;
+    padding: 10px 20px; /* ეს ქმნის უჯრის ზომას */
+    border: 1px solid #c5a059; /* ოქროსფერი ჩარჩო */
+    border-radius: 5px; /* მომრგვალებული კუთხეები */
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s; /* ანიმაციის ეფექტი */
+}
+
+/* როცა მაუსს მიიტან (hover) */
+.nav-links a:hover {
+    background-color: #c5a059; /* უჯრა ივსება ფერით */
+    color: #000; /* ტექსტი ხდება შავი */
+    cursor: pointer;
+}/* ნავბარის მთავარი სტილი (Glassmorphism + Dark თემა) */
+.navbar-custom {
+    background-color: rgba(26, 26, 26, 0.85) !important;
+    backdrop-filter: blur(10px); /* უკანა ფონის დაბლურება */
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2); /* ნაზი ოქროსფერი ხაზი ქვემოთ */
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+/* თიბისის ლოგოს ზომა და ეფექტი */
+.navbar-brand img {
+    height: 38px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.05); /* ლოგოზე მიტანისას ოდნავ დიდდება */
+}
+
+/* მენიუს ლინკების სტილი */
+.nav-link-custom {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 8px 16px !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* ლინკზე მიტანის ეფექტი (ოქროსფერი ხდება და ქვემოთ ხაზი უჩნდება) */
+.nav-link-custom:hover {
+    color: #c5a059 !important;
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 16px;
+    background-color: #c5a059;
+    transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+    width: calc(100% - 32px);
+}
+
+/* აქტიური გვერდის ლინკი (რომ მივახვედროთ მომხმარებელი სად არის) */
+.nav-link-custom.active {
+    color: #c5a059 !important;
+}
+.nav-link-custom.active::after {
+    width: calc(100% - 32px);
+}
+
+/* მობილურის მენიუს ღილაკის (ჰამბურგერის) ფერი */
+.navbar-toggler {
+    border-color: rgba(197, 160, 89, 0.5) !important;
+}
+.navbar-toggler-icon {
+    filter: invert(70%) sepia(20%) saturate(1000%) hue-rotate(10deg); /* ოქროსფერი ჰამბურგერი */
+}/* ნავბარის ბაზა - ფიქსირებული ზემოთ + მინის ეფექტი */
+.navbar-custom {
+    background-color: rgba(10, 10, 10, 0.75) !important;
+    backdrop-filter: blur(12px); /* ბლურის ეფექტი უკანა ფონზე */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.15); /* ძალიან ნაზი ოქროსფერი ხაზი */
+    padding: 18px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ლოგოს მოძრაობა მაუსის მიტანისას */
+.navbar-brand img {
+    height: 35px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.03);
+}
+
+/* ლინკების დახვეწილი სტილი */
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 18px !important;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/* მაუსის მიტანისას ფერის შეცვლა */
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: #c5a059 !important; /* თიბისის ოქროსფერი/ბრინჯაოსფერი აქცენტი */
+}
+
+/* ქვედა ხაზის ანიმაცია ლინკებზე */
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 18px;
+    background-color: #c5a059;
+    transition: width 0.25s ease;
+}
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+    width: calc(100% - 36px);
+}
+
+/* ოქროსფერი Call-to-Action ღილაკი მენიუში */
+.btn-nav-gold {
+    background: transparent;
+    color: #c5a059 !important;
+    border: 1px solid #c5a059;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.btn-nav-gold:hover {
+    background: #c5a059;
+    color: #000000 !important;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+}
+
+/* მობილურის მენიუს ღილაკის გასწორება */
+.navbar-toggler {
+    border: none !important;
+    padding: 0;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+.navbar-toggler-icon {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(340deg); /* ჰამბურგერის გადაყვანა ოქროსფერში */
+}
