@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პროდუქტების არჩევა - HairCare Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 👑 თხელი ნავბარი */
+        .navbar-custom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar-custom ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .navbar-custom a {
+            text-decoration: none;
+            color: gold;
+            font-weight: 500;
+        }
+
+        /* 🛍️ პროდუქტების მონიშვნის კონტეინერი */
+        .selection-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #141414;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #c5a059;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .selection-container h2 {
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #ffffff;
+            font-size: 24px;
+            border-bottom: 2px solid #c5a059;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        /* 🗹 ჩეკბოქსების სტილი */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            background: #1d1d1d;
+            padding: 14px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border: 1px solid #333;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .checkbox-group:hover {
+            border-color: #c5a059;
+            background: #222;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c5a059;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 16px;
+            color: #ddd;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 500;
+        }
+
+        /* 💾 ოქროსფერი ღილაკი */
+        .save-btn {
+            background-color: #c5a059;
+            color: #000000;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .save-btn:hover {
+            background-color: #e2ba6e;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #444;
+            font-size: 13px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar-custom">
+        <a href="https://www.tbcbank.ge/web/ka/web/guest/education" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOYAAACUCAMAAACwXqVDAAAAk1BMVEX///8Are////0Aq+////tlZmgAqe4Ap+5oaWtiY2X7+/utrq8Ao+6hoqP4+PgAre2+vr/Fxcbv7+9xcnRcXV9XWFvs9vubnJ3H6/np6enLy8ySk5Ta2tuGh4jQ7Pjg8vpVvfB+f4BjwvG13/dzxPKd1vUAn+49tvCT0vWCy/TC5vmn3ffw/Pw1uvFpx/Hl+PuU2f" style="height: 35px; width: auto;">
+        </a>
+
+        <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="shop.html">მაღაზია</a></li>
+            <li><a href="registracia.html">ავტორიზაცია</a></li>
+            <li><a href="arceva.html" class="active">არჩევა</a></li>
+            <li><a href="propaili.html">ჩემი პროფილი</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="selection-container">
+            <h2>🛍️ მონიშნე შენი პროდუქტები</h2>
+            <form id="productsForm" method="POST">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="clay" name="products" value="hair clay">
+                    <label for="clay">Based hair clay</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="salt" name="products" value="sea salt spray">
+                    <label for="salt">Based sea salt spray</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="powder" name="products" value="texture powder">
+                    <label for="powder">Based texture powder</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="oil" name="products" value="beard oil">
+                    <label for="oil">Beard oil</label>
+                </div>
+
+                <button type="propaili.html" class="save-btn">არჩევანის შენახვა 💾</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        if (!localStorage.getItem("isRegistered")) {
+            alert("გთხოვთ, ჯერ გაიაროთ რეგისტრაცია!");
+            window.location.href = "registracia.html";
+        }
+
+        document.getElementById("productsForm").addEventListener("submit", function(event) {
+            // event.preventDefault(); <-- 🛠️ ეს წაშლილია, რომ ფორმა ბექენდზე გაიგზავნოს!
+
+            let selectedProducts = [];
+            if (document.getElementById("clay").checked) selectedProducts.push("hair clay");
+            if (document.getElementById("salt").checked) selectedProducts.push("sea salt spray");
+            if (document.getElementById("powder").checked) selectedProducts.push("texture powder");
+            if (document.getElementById("oil").checked) selectedProducts.push("beard oil");
+
+            localStorage.setItem("myProducts", JSON.stringify(selectedProducts));
+            alert("არჩევანი წარმატებით შენახულია! 🎉");
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 HairCare Hub. ყველა უფლება დაცულია.</p>
+    </footer>
+</body>
+</html>
